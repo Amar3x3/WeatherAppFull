@@ -40,7 +40,7 @@ const WeatherSummaryChart = ({ city, date }) => {
         console.log()
         const current = await axios.get(OPENWEATHERMAP_URL);
         const daily = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/weather/daily-summary`, {
-          params: { city, date}
+          params: { city, yes}
         })
         console.log(daily.data)
         const curData = current.data;
